@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Logo -->
+    <div id="logo" class="container-fluid d-flex align-items-center text-nowrap mb-2">
+        <span>Pomodoro Timer</span>
+    </div>
+
+    <!-- Centered container -->
+    <div id="main-container" class="container-fluid d-flex flex-column justify-content-center align-items-center gap-4">        
+        
+        <!-- Top row -->
+        <div id="top-btn-row" class="d-flex flex-column flex-wrap flex-sm-row gap-2 gap-md-3">
+            <button id="pomodoro-btn" class="fs-5 p-3">POMODORO</button>
+            <button id="short-break-btn" class="fs-5 p-3">SHORT BREAK</button>
+            <button id="long-break-btn" class="fs-5 p-3">LONG BREAK</button>
+        </div>
+
+        <!-- Time display -->
+        <div id="display-row">
+            <span id="time-display">25:00</span>
+        </div>
+
+        <!-- Bottom row -->
+        <div id="bottom-btn-row">
+            <button id="restart-btn" class="p-2 ps-3"><i class="bi bi-arrow-clockwise"></i></button>
+            <button id="play-btn" class="p-2"><i class="bi bi-play-fill"></i></button>
+            <button id="pause-btn" class="p-2"><i class="bi bi-pause-fill"></i></button>
+            <button id="stop-btn" class="p-2"><i class="bi bi-stop-fill"></i></button>
+            <button id="customize-btn" class="p-2 pe-3" data-bs-toggle="modal" data-bs-target="#customizeModal"><i class="bi bi-gear-fill"></i></button>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="customizeModal" tabindex="-1" aria-labelledby="customizeModalLabel" aria-hidden="true">
+        
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header d-flex justify-content-between align-items-center py-2">
+                    <h5 class="modal-title mb-0" id="customizeModalLabel">Timer Settings</h5>
+                    <button type="button" class="btn-close-white fs-3 px-1" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x-circle"></i>
+                        <i class="bi bi-x-circle-fill"></i>
+                    </button>
+                </div>
+                
+
+                <div class="modal-body">
+                    
+                    <form id="customize-form">
+
+                        <div class="mb-3">
+                            <label for="pomodoro-minutes" class="form-label">Pomodoro Minutes</label>
+                            <input type="number" class="form-control" id="pomodoro-minutes" min="1" max="60" value="25">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="short-break-minutes" class="form-label">Short Break Minutes</label>
+                            <input type="number" class="form-control" id="short-break-minutes" min="1" max="15" value="5">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="long-break-minutes" class="form-label">Long Break Minutes</label>
+                            <input type="number" class="form-control" id="long-break-minutes" min="1" max="30" value="15">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="w-100 fs-4 p-1 mb-3" id="save-customization-btn">Save</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid d-flex flex-column align-items-center justify-content-center text-center py-4">
+        <p>2024 | Coded by <a class="text-decoration-none" href="https://github.com/cainhurst87">Luiz Leal</a><br>Background photo featuring the Heart and Soul Nebulae from the game <a class="text-decoration-none" href="https://www.elitedangerous.com" target="_blank">Elite Dangerous</a>.</p>    
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

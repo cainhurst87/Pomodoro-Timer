@@ -1,0 +1,185 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Monda';
+}
+
+body{
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+#main-container{
+    min-height: 60vh;
+}
+
+/* ----------------------------------- Logo ----------------------------------- */
+
+#logo{
+    min-height: 10vh;
+}
+
+#logo span{
+    font-size: 2em;
+    padding: 2%;
+    color: #fff;
+    font-weight: 1000;
+}
+
+/* ----------------------------------- Top Row ----------------------------------- */
+
+#top-btn-row button{
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 30em;
+    transition: 0.3s;
+}
+
+#top-btn-row button.active{
+    background: #fff; /* Fundo branco para destaque */
+    color: #000; /* Cor do texto preta para contraste */
+}
+
+#top-btn-row button:hover, #top-btn-row button:active{
+    color: #000;
+    background: #fff;
+}
+
+/* ----------------------------------- Time Display ----------------------------------- */
+
+#time-display{
+    color: #fff;
+    font-size: 5em;
+}
+
+/* ----------------------------------- Bottom Row ----------------------------------- */
+
+#bottom-btn-row button{
+    color: #fff;
+    background: transparent;
+    font-size: 2em;
+}
+
+#bottom-btn-row button:hover, #bottom-btn-row button:active{
+    color: #000;
+    background: #fff;
+    transition: 0.3s;
+}
+
+#bottom-btn-row button.active{
+    background: #fff; /* Fundo branco para destaque */
+    color: #000; /* Cor do texto preta para contraste */
+}
+
+#bottom-btn-row button:first-child{
+    border-top-left-radius: 30em;
+    border-bottom-left-radius: 30em;
+}
+
+#bottom-btn-row button:last-child {
+    border-top-right-radius: 30em;
+    border-bottom-right-radius: 30em;
+}
+
+/* ----------------------------------- Customize Modal ----------------------------------- */
+
+
+.modal-body, .modal-header, .modal-footer {
+    border-top: none !important; 
+    border-bottom: none !important; 
+}
+
+.modal-content{
+    color: #fff;
+    background: #000;
+    border: 2px solid #141414;
+
+}
+
+.btn-close-white{
+    color: #fd0000;
+    border: none;
+    background: none;
+}
+
+.btn-close-white i.bi-x-circle-fill {
+    display: none;
+}
+
+.btn-close-white:hover i.bi-x-circle {
+    display: none; 
+}
+
+.btn-close-white:hover i.bi-x-circle-fill {
+    display: block; 
+}
+
+.modal-footer button{
+    color: #fff;
+    background: #0d0abe;
+    border-radius: 0.3em;
+    border: 1px solid #0d0abe;
+    transition: .2s;
+}
+
+.modal-footer button:hover{
+    color: #0d0abe;
+    background: #000;
+}
+
+
+/* ----------------------------------- Footer ----------------------------------- */
+
+    footer{
+        min-height: 5vh;
+    }
+
+    footer p{
+        color: #eeeeee;
+        font-size: 0.9em;
+        padding: 1em;
+    }
+
+    footer a{
+        color: #0d0abe;
+        transition: .2s;
+    }
+
+    footer a:hover{
+        color: #2424fd;
+    }
+
+
+/* MD */
+@media (max-width: 768px) {
+
+    #logo span{
+        font-size: 1em;
+        padding: 2%;
+    }
+
+    #bottom-btn-row button{
+        font-size: 1.5em;
+    }
+
+    footer p{
+        font-size: 0.7em;
+    }
+
+}
+
+@media (max-width: 600px){
+
+    #logo span{
+        font-size: 1em;
+    }
+
+}
+
+
+
